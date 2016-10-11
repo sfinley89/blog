@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# http://ifyouseeit.org/blog/2013/08/07/switch-db-from-sqlite3-to-postgres-in-rails-app/
+gem 'pg'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

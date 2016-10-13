@@ -1,127 +1,5 @@
-  
-
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <style type="text/css">
-
-    /* CSS Layout */
-    body {
-      min-width: 630px;
-    }
-
-    #container {
-      padding-left: 200px;
-      padding-right: 190px;
-    }
-    
-    #container .column {
-      position: relative;
-      float: left;
-    }
-    
-    #center {
-      padding: 10px 20px;
-      width: 100%;
-    }
-    
-    #left {
-      width: 180px;
-      padding: 0 10px;
-      right: 240px;
-      margin-left: -100%;
-    }
-    
-    #right {
-      width: 130px;
-      padding: 0 10px;
-      margin-right: -100%;
-    }
-    
-    #footer {
-      clear: both;
-    }
-    
-    /* This is for Internet Explorer */
-    * html #left {
-      left: 150px;
-    }
-
-    /* This is to make the columns the same height as each other */
-    #container {
-      overflow: hidden;
-    }
-
-    #container .column {
-      padding-bottom: 1001em;
-      margin-bottom: -1000em;
-    }
-
-    /* For the footer */
-    * html body {
-      overflow: hidden;
-    }
-    
-    * html #footer-wrapper {
-      float: left;
-      position: relative;
-      width: 100%;
-      padding-bottom: 10010px;
-      margin-bottom: -10000px;
-      background: #fff;
-    }
-
-    /* Aesthetics */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family:Sans-serif;
-      line-height: 1.5em;
-    }
-    
-    p {
-      color: #555;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    nav ul a {
-      color: darkgreen;
-      text-decoration: none;
-    }
-
-    #header, #footer {
-      font-size: large;
-      padding: 0.3em;
-      background: #686868;
-      color: #FFFFFF;
-    }
-
-    #left {
-      background: #DAE9BC;
-    }
-    
-    #right {
-      background: #F7FDEB;
-    }
-
-    #center {
-      background: #fff;
-    }
-
-    #container .column {
-      padding-top: 1em;
-    }
-    
-  </style>
-
-</head>
-
 <body>
 
   <header id="header"><center><h1>Sean Michael Finley's Blog with Google Maps</h1></center>
@@ -131,7 +9,7 @@
 
     <main id="center" class="column">
       <article>
-          <h1>Listing Articles</h1><br>
+          <h1>Listing Blog Articles</h1><%= link_to 'New Post', new_article_path %>
         <table>
           <tr>
             <th>Title</th>
@@ -143,9 +21,9 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'View', article_path(article) %></td>
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
+      <td><%= link_to 'Delete', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
@@ -158,19 +36,12 @@
     <nav id="left" class="column">
       <h3><%= link_to("Home", welcome_index_path) %></h3>
       <ul>
-        <li><%= link_to 'New article', new_article_path %></li>
+        <li></li>
       </ul>
     </nav>
-
-    <div id="right" class="column">
-      <h3>Pics</h3>
-    </div>
-
-  </div>
-
-  <div id="footer-wrapper">
+</div>
+<div id="footer-wrapper">
     <footer id="footer">
-    <center><h1>Sean Michael FInley &copy;</h1></center>
     </footer>
   </div>
 <% end %>

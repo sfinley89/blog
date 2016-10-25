@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 # http://ifyouseeit.org/blog/2013/08/07/switch-db-from-sqlite3-to-postgres-in-rails-app/
 gem 'pg'
-
-
+# 
+gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # http://stackoverflow.com/questions/40032574/rails-app-wont-deploy-to-heroku
+  gem 'sqlite3'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 

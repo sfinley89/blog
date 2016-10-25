@@ -1,17 +1,8 @@
 == README
-
-git clone git@github.com:sfinley89/blog.git
-
-bundle 
-
-rake db:migrate
-
-rails s
-
 Things you may want to cover:
 
 * Ruby version
-	ruby 2.3.1
+	ruby 2.3.1p112 (2016-04-26 revision 54768) 
 * System dependencies
 
 * Configuration
@@ -26,8 +17,12 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+1) git clone https://github.com/sfinley89/blog.git
+
+2) bundle 
+
+rake db:migrate
+
+rails s
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
